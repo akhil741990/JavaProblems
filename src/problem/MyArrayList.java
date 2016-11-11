@@ -191,7 +191,22 @@ public class MyArrayList<T> implements List<T> {
 	@Override
 	public int lastIndexOf(Object arg0) {
 		// TODO Auto-generated method stub
-		return 0;
+		if(arg0 == null){
+			for(int i=size-1;i >=0;i--){
+				if(elementData[i] == null){
+					return i;
+				}
+			}
+		}else{
+			for(int i=size-1;i >=0;i--){
+				if(arg0.equals(elementData[i])){
+					return i;
+				}
+				
+			}
+		}
+		
+		return -1;
 	}
 
 	@Override
@@ -209,13 +224,26 @@ public class MyArrayList<T> implements List<T> {
 	@Override
 	public boolean remove(Object arg0) {
 		// TODO Auto-generated method stub
-		return false;
+		int index = indexOf(arg0);
+		if(index < 0){
+			return false;
+		}else{
+			System.arraycopy(elementData, index+1, elementData, index, size - index -1);
+			elementData[size-1] = null;
+			size--;
+			return true;
+		}
+		
 	}
 
 	@Override
 	public T remove(int arg0) {
 		// TODO Auto-generated method stub
-		return null;
+		rangeCheck(arg0);
+		System.arraycopy(elementData, arg0+1, elementData, arg0, size - arg0 -1);
+		elementData[size-1] = null;
+		size--;
+		return (T)elementData[arg0];
 	}
 
 	@Override
