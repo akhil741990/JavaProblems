@@ -1,8 +1,9 @@
 package statemachine;
 
 
-public class Transition<E extends Event,S extends State> {
+public class Transition<E extends EventEnum,S extends StateEnum> {
 
+	private 
 	public Transition(S fromState, S toState, E event, boolean isFinalState){
 		
 	}
