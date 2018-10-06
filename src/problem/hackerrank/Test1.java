@@ -34,7 +34,7 @@ Explanation
 
 For the first example, you can solve the problems with rating 5 and 7 on the first day and the problem with rating 4 on the next day. Note that the problems with rating 5 and 4 cannot be completed consecutively because the ratings should differ by at least K (which is 2). Also, the problems cannot be completed in order 5,7,4 in one day because the problems solved on a day should be in increasing difficulty level.
 
-For the second example, all problems can be solved on the same day.
+For the second example, all problems can be solved on the same day.git
 	 */
 
 
