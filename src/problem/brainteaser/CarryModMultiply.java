@@ -1,4 +1,4 @@
-package problem.hackerrank;
+package problem.brainteaser;
 
 public class CarryModMultiply {
 
