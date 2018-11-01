@@ -11,7 +11,7 @@ public class QueenAttackWithObstacles {
 	        int pos = 0;
 	        Map<String,Integer> obs = new HashMap<String,Integer>();
 	        for(int i = 0 ; i < obstacles.length ;i++){
-	            obs.put("("+obstacles[i][0] +","+obstacles[i][0] +")",1);
+	            obs.put("("+obstacles[i][0] +","+obstacles[i][1] +")",1);
 	        }
 	        pos = pos + getAttackPostitions(n, r_q + 1,c_q,1,0,obs);
 	        pos = pos + getAttackPostitions(n, r_q - 1,c_q,-1,0,obs);
