@@ -1,0 +1,36 @@
+https://www.geeksforgeeks.org/find-minimum-number-of-coins-that-make-a-change
+
+
+https://www.youtube.com/watch?v=Y0ZqKpToTic
+
+https://github.com/mission-peace/interview/blob/master/src/com/interview/dynamic/CoinChangingMinimumCoin.java
+
+ 
+M = payment to be made with the given coins
+
+coins[]  = {1,5,6,8}
+M = 11
+
+R[]  // array which holds the chosen coins
+
+for(i = 0 ; i< coins.length;i++){
+
+	for(j = 0; j < = M ; j ++ ){
+	{
+		if(coins[i] < = j){
+			T[i][j] = min(1+ T[i][j- coins[i]], T[i-1][j]);
+				R[j] = (1+ T[i][j- coins[i]]) < T[i-1][j] ? i : i-1 
+			
+		}else{
+		 	T[i][j] = T[i-1][j];
+		 	R[j] = i-1;
+		}
+	}
+}
+
+start = R.lenth;
+
+while (start!=0){
+	start = R[start];
+	S.O.P(start);
+}
