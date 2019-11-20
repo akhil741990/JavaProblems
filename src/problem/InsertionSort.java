@@ -1,4 +1,9 @@
-static int insertionSort(int[] arr) {
+package problem;
+
+
+class InsertionSort{
+
+	static int insertionSort(int[] arr) {
         int temp;
         int shiftCount = 0;
         int  j;
@@ -14,3 +19,8 @@ static int insertionSort(int[] arr) {
         }
         return shiftCount;
     }
+}
+
+
+
+
