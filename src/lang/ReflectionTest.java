@@ -11,6 +11,7 @@ public class ReflectionTest {
 		
 		setSecurityManager();
 		ImmutableClass i = new ImmutableClass("Immutable");
+		i.getName();
 		System.out.println("Old Value :"+i.getName());
 
 		Field f = i.getClass().getDeclaredField("name");

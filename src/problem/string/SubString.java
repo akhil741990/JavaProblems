@@ -4,7 +4,8 @@ public class SubString {
 
 	public static void main(String args[]){
 		String s = "abcdef";
-		printAllSubString(s);
+		//printAllSubString(s);
+		System.out.println(s.substring(0,1));
 	}
 	
 	public static void printAllSubString(String s){

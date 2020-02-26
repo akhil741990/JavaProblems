@@ -11,11 +11,8 @@ private final String name;
         this.name = name;
     }
     
-    public String getName() {
+    public synchronized String getName() {
         return name;
     }
-    
-    
-   
     
 }
