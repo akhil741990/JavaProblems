@@ -11,6 +11,16 @@ Initially, you have a tank of infinite capacity carrying no petrol.
     The truck will move one kilometer for each litre of the petrol.
  * 
  * 
+ * 
+ * 
+ * Time Complexity: Seems to be more than linear at first look.
+ *  If we consider the items between start and end as part of a circular queue, 
+ *  we can observe that every item is enqueued at most two times to the queue. 
+ *  The total number of operations is proportional to the total number of enqueue operations.
+ *   Therefore the time complexity is O(n).
+
+Auxiliary Space: O(1)
+ * 
  */
 public class Petrol 
 { 
