@@ -52,7 +52,11 @@ public class Petrol
 	        int  curPetrol = truckTour[start][0] - truckTour[start][1];
 	        while(curPetrol < 0 || start !=end){
 
+	        	// If current amount of petrol in truck becomes less than 0, then 
+	        	// remove the starting petrol pump from tour 
 	            while(curPetrol < 0 && start !=end){
+	            	
+	            	// Remove starting petrol pump. Change start 
 	                curPetrol = curPetrol - (truckTour[start][0] - truckTour[start][1]);
 	                start = (start +1 ) % n;
 	                if(start == 0){
