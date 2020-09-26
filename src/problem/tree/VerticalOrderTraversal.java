@@ -51,7 +51,7 @@ public class VerticalOrderTraversal {
 		traverseVertically(root, 0, map);
 		
 		for(Map.Entry<Integer, Vector<Integer>> entry: map.entrySet()){
-			System.out.println(entry.getValue());
+			System.out.println(entry.getKey()+":"+entry.getValue());
 		}
 	}
 
