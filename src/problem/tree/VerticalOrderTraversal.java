@@ -10,11 +10,13 @@ public class VerticalOrderTraversal {
 	static class Node {
 		public Node left;
 		public Node right;
-		private Integer data;
+		public Integer data;
+		public boolean isRightVisted;
 		public Node(int data){
 			this.data = data;
 			left = null;
 			right = null;
+			isRightVisted = false;
 					
 		}
 	}
