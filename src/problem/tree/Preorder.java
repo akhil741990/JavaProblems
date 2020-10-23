@@ -6,7 +6,7 @@ import java.util.Stack;
 
 import problem.tree.VerticalOrderTraversal.Node;
 
-public class Inorder {
+public class Preorder {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -20,6 +20,7 @@ public class Inorder {
         root.right.right = new Node(7); 
         root.right.left.right = new Node(8); 
         root.right.right.right = new Node(9); 
+        
         traverse(root);
 	}
 	
@@ -27,38 +28,37 @@ public class Inorder {
 		Stack<Node> s = new Stack<VerticalOrderTraversal.Node>();
 		while(root!=null){
 			s.push(root);
+			System.out.println(root.data);
 			root = root.left;
-			
 		}
 		while(!s.isEmpty()){
-			Node next = s.pop();
-			System.out.println(next.data);
-			next = next.right;
+			Node next = s.pop().right;
 			while(next!=null){
 				s.push(next);
-				next=next.left;
+				System.out.println(next.data);
+				next = next.left;
 			}
 		}
 	}
 
-	public static List<Integer>  traverseAndCompute(Node root){
-		List<Integer> inorder = new ArrayList<Integer>();
+	public static List<Integer> traverseAndCompute(Node root){
+		List<Integer> preorder = new ArrayList<Integer>();
 		Stack<Node> s = new Stack<VerticalOrderTraversal.Node>();
 		while(root!=null){
 			s.push(root);
+			System.out.println(root.data);
+			preorder.add(root.data);
 			root = root.left;
-			
 		}
 		while(!s.isEmpty()){
-			Node next = s.pop();
-			System.out.println(next.data);
-			inorder.add(next.data);
-			next = next.right;
+			Node next = s.pop().right;
 			while(next!=null){
 				s.push(next);
-				next=next.left;
+				System.out.println(next.data);
+				preorder.add(next.data);
+				next = next.left;
 			}
 		}
-		return inorder;
+		return preorder;
 	}
 }
